@@ -1,5 +1,6 @@
 package br.com.kafka;
 
+import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -7,10 +8,10 @@ import org.apache.kafka.common.serialization.StringSerializer;
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
 
-public class KafkaProducer {
+public class Producer {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        var producer = new org.apache.kafka.clients.producer.KafkaProducer<String, String>(properties());
+        var producer = new KafkaProducer<String, String>(properties());
         var value = "3423434,546456,3213223";
         var record = new ProducerRecord<>("TOPIC_TESTE", value, value);
         producer.send(record, (data, ex) -> {
