@@ -1,4 +1,4 @@
-package br.com.kafka.basico;
+package br.com.kafka.basico.service;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
