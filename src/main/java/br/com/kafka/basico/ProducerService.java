@@ -1,4 +1,4 @@
-package br.com.kafka.service;
+package br.com.kafka.basico;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
